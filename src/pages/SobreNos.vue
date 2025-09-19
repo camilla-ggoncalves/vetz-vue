@@ -94,7 +94,10 @@ const values = ref([
     title: 'Excelência',
     description: 'Comprometidos com a qualidade em tudo que fazemos'
   }
+
 ])
+
+
 </script>
 
 <style scoped>
