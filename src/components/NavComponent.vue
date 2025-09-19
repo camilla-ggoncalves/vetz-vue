@@ -1,92 +1,132 @@
 <template>
-  <div class="router-example">
-    <h2 style="display: flex; justify-content: center;">🚀 Exemplo Vue Router</h2>
+  <header class="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
 
-    <nav class="navigation">
-      <RouterLink to="/home" class="nav-link">HOMEPAGE</RouterLink>
-      <RouterLink to="/about" class="nav-link">SOBRE NÓS</RouterLink>
+          <!-- Logo -->
+          <RouterLink to="/" rel="home">
+            <img
+              class="logomenu"
+              src="../assets/logo-vetz.svg"
+              alt="VET Z"
+              title="VetZ"
+            />
+          </RouterLink>
+
+          <!-- Botão hamburger -->
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars"></i>
+            </span>
+          </button>
+
+          <!-- Menu -->
+          <div class="navbar-collapse collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto left-menu">
+              <li><RouterLink to="/home">HOME PAGE</RouterLink></li>
+              <li><RouterLink to="/about">SOBRE NÓS</RouterLink></li>
+              <li>CURIOSIDADES</li>
+              <li>RECOMENDAÇÕES</li>
+              <li>VACINAÇÃO</li>
+              <li>CADASTRAR</li>
+            </ul>
+          </div>
+
+        </nav>
+      </div>
     </nav>
-
-
-    <div class="content">
-      <RouterView />
-    </div>
-
-  </div>
+  </header>
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
+import { RouterLink } from 'vue-router';
 </script>
 
 <style scoped>
-.router-example {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+.navbar {
+  width: 100%;
+  z-index: 9999;
+  padding: 4px 0;
+  background-color: #FEFFEF;
+  box-shadow: 0px 0px 25px 0px #2125295c;
 }
 
-.navigation {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 30px;
-  padding: 15px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-
+.navbar-brand {
+  font-family: 'Arial, Helvetica, sans-serif';
+  font-size: 28px;
+  font-weight: 100;
+  color: #000 !important;
 }
 
-.nav-link {
+.navbar-toggler {
+  padding: 5px 10px;
+  font-size: 24px;
+  line-height: 1;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid #FEFFEF;
+}
+
+.navbar-toggler-icon i {
+  color: #000;
+}
+
+.navbar-fixed-top .navbar-nav > li > a {
+  color: #000 !important;
+  font-size: 16px;
+  line-height: 1;
   padding: 10px 15px;
-  text-decoration: none;
-  color: #495057;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  font-weight: 500;
+  font-family: 'Arial, Helvetica, sans-serif';
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
 }
 
-.nav-link:hover {
-  background-color: #e9ecef;
-  color: #007bff;
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
-.nav-link.router-link-active {
-  background-color: #007bff;
-  color: white;
+.left-menu {
+  margin-right: 32px;
 }
 
-.content {
-  min-height: 300px;
-  padding: 20px;
-  border: 2px solid #dee2e6;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  background-color: white;
+.btn-menu, .btn-menu:hover {
+  color: #000;
+  background-color: #FEFFEF;
+  border-color: #FEFFEF;
+  padding: 5px 15px;
+  border-radius: 25px;
+  font-family: 'Arial, Helvetica, sans-serif';
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.route-info {
-  padding: 15px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  border-left: 4px solid #007bff;
+.logomenu {
+  height: 60px;
+  width: auto; 
 }
 
-.route-info h4 {
-  margin-top: 0;
-  color: #495057;
+.imgperfil {
+  height: 20px;
+  width: auto;
 }
 
-.route-info p {
-  margin: 5px 0;
-  font-family: monospace;
-  background-color: white;
-  padding: 5px;
-  border-radius: 3px;
-}
 </style>
