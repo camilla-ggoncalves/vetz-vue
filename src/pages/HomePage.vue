@@ -30,6 +30,7 @@ const goToAbout = () => {
 .home {
   padding: 2rem;
   text-align: center;
+  background-color: #FEFFEF;
 }
 .home h1 {
   font-size: 2rem;
