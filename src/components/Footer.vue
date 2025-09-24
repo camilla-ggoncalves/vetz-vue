@@ -31,10 +31,16 @@ const year = new Date().getFullYear();
 </script>
 
 <style scoped>
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   padding: 12px 0 10px 0;
   background-color: #B5E7A0;
   border-top: 1px solid #B5E7A0;
+  text-align: center;
 }
 
 .footerp1 {

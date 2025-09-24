@@ -1,15 +1,18 @@
 <template>
   <div class="card">
-    <img :src="img" :alt="title" />
+    <img :src="imageSrc" :alt="title" />
     <h3>{{ title }}</h3>
   </div>
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   title: String,
   img: String,
 });
+
+const imageSrc = new URL(props.img, import.meta.url).href;
+
 </script>
 
 <style scoped>

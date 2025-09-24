@@ -3,10 +3,10 @@
     <h1>A verdadeira cura começa no respeito pela vida.</h1>
 
     <div class="products">
-      <ProductCard title="TAPETE" img="/tapete.png" />
-      <ProductCard title="RAÇÃO" img="/racao.png" />
-      <ProductCard title="BRINQUEDOS" img="/brinquedos.png" />
-      <ProductCard title="CAMA" img="/cama.png" />
+      <ProductCard title="TAPETE" img="@/assets/tapete.jpg" />
+      <ProductCard title="RAÇÃO" img="@/assets/racao.jpg" />
+      <ProductCard title="BRINQUEDOS" img="@/assets/brinquedos.jpg" />
+      <ProductCard title="CAMA" img="@/assets/cama.jpg" />
     </div>
   </section>
 </template>
