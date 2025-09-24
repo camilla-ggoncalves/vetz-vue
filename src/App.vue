@@ -6,9 +6,6 @@ import Footer from "./components/Footer.vue"; // importa o rodapé
 <template>
   <NavComponent></NavComponent>
 
-  <router-link to="/home">Homepage</router-link>
-  <router-link to="/about">Sobre Nós</router-link>
-
   <router-view /> <!-- Para aparecer o conteúdo das páginas -->
 
   <Footer />
