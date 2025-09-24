@@ -1,33 +1,21 @@
 <template>
   <div class="about-page">
-    <h1>ℹ️ Sobre Nós</h1>
-    
+    <br/><br/><br/>
+   
     <div class="about-content">
-      <div class="company-info">
-        <h2>🚀 Nossa Missão</h2>
-        <p>
-          Somos uma empresa dedicada a criar soluções tecnológicas inovadoras 
-          que simplificam a vida das pessoas e impulsionam o crescimento dos negócios.
+      <div class="sobre-nos-box">
+        <h2 class="sobre-nos-title">Quem somos nós?</h2>
+        <p class="sobre-nos-text">
+          Somos um grupo de estudantes do 3º ano do ensino médio, com foco em veterinária e zootecnia. Nosso projeto, "Vetz", busca explorar de forma inovadora a relação entre os animais, a saúde deles e a acessibilidade. Com foco em áreas como comportamento animal, controle de vacinação e práticas de cuidado, unindo conhecimento e sensibilidade para transformar a forma como lidamos com os nossos animais.<br>
+          Nosso objetivo é contribuir para o bem-estar dos animais, de forma que possamos juntar o carinho e cuidado por eles no VetZ.
         </p>
       </div>
 
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">{{ stats.years }}</div>
-          <div class="stat-label">Anos de Experiência</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">{{ stats.projects }}</div>
-          <div class="stat-label">Projetos Concluídos</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">{{ stats.clients }}</div>
-          <div class="stat-label">Clientes Satisfeitos</div>
-        </div>
-      </div>
 
+
+     
       <div class="team-section">
-        <h2>👥 Nossa Equipe</h2>
+       
         <div class="team-grid">
           <div v-for="member in team" :key="member.id" class="team-member">
             <div class="member-avatar">{{ member.emoji }}</div>
@@ -38,7 +26,7 @@
       </div>
 
       <div class="values-section">
-        <h2>💡 Nossos Valores</h2>
+       
         <div class="values-list">
           <div v-for="value in values" :key="value.id" class="value-item">
             <span class="value-icon">{{ value.icon }}</span>
@@ -62,48 +50,20 @@ const stats = ref({
   clients: 89
 })
 
-const team = ref([
-  { id: 1, name: 'Ana Silva', role: 'CEO & Fundadora', emoji: '👩‍💼' },
-  { id: 2, name: 'Carlos Santos', role: 'CTO', emoji: '👨‍💻' },
-  { id: 3, name: 'Maria Costa', role: 'Designer UX/UI', emoji: '👩‍🎨' },
-  { id: 4, name: 'João Oliveira', role: 'Desenvolvedor Senior', emoji: '👨‍💻' }
-])
 
-const values = ref([
-  {
-    id: 1,
-    icon: '🎯',
-    title: 'Foco no Cliente',
-    description: 'Colocamos as necessidades dos nossos clientes em primeiro lugar'
-  },
-  {
-    id: 2,
-    icon: '⚡',
-    title: 'Inovação',
-    description: 'Buscamos constantemente novas tecnologias e soluções'
-  },
-  {
-    id: 3,
-    icon: '🤝',
-    title: 'Colaboração',
-    description: 'Trabalhamos em equipe para alcançar os melhores resultados'
-  },
-  {
-    id: 4,
-    icon: '🌟',
-    title: 'Excelência',
-    description: 'Comprometidos com a qualidade em tudo que fazemos'
-  }
 
-])
+
 
 
 </script>
 
 <style scoped>
 .about-page {
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #FEFFEF;
+  margin: 0;
+  padding: 0;
 }
 
 .about-content {
@@ -111,10 +71,52 @@ const values = ref([
 }
 
 .company-info {
-  background-color: #f8f9fa;
-  padding: 25px;
-  border-radius: 8px;
-  margin-bottom: 30px;
+  background-color: #FEFFEF;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 48px 0 32px 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sobre-nos-box {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  padding: 96px 96px 72px 96px;
+  margin: 24px auto 32px auto;
+  max-width: 95vw;
+  width: 900px;
+}
+.sobre-nos-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 16px;
+}
+.sobre-nos-text {
+  font-size: 1.18rem;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+}
+/* Título maior */
+.about-title {
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Texto principal maior */
+.about-text {
+  font-size: 1.35rem;
+  line-height: 2.1;
+  color: #333;
+  text-align: center;
+  max-width: 900px;
 }
 
 .company-info h2 {
